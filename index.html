@@ -37,52 +37,40 @@
 
 
     <header class="header header-transparent sticky-top" id="mainHeader">
-  <div class="topbar">
-    En <strong>HEALTHPOD</strong> redefinimos el acceso a la salud.
-  </div>
-
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img
-          height="150"
-          width="85"
-          class="logo logo-dark"
-          src="assets/images/icons/healthpod_logo.svg"
-          alt="HealthPod Logo"
-        />
-      </a>
-
-      <!-- Botón hamburguesa -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-        aria-controls="navmenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navmenu">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#about">Quiénes Somos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#farmacia">Farmacia a domicilio 24/7</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimoniales">Pacientes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contáctanos</a></li>
-        </ul>
-
-        <!-- Botones dentro del cajón -->
-        <div class="mobile-buttons d-flex justify-content-center mt-3 gap-2">
-          <a href="#" class="btn btn--primary">Regístrate</a>
-          <a href="#" class="btn btn--secondary">Iniciar Sesión</a>
-        </div>
+      <div class="topbar">
+        En <strong>HEALTHPOD</strong> redefinimos el acceso a la salud.
       </div>
-    </div>
-  </nav>
-</header>
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img height="150" width="85" class="logo logo-dark" src="assets/images/icons/healthpod_logo.svg"
+              alt="HealthPod Logo" />
+          </a>
+
+          <!-- Botón hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+            aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#about">Quiénes Somos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#farmacia">Farmacia a domicilio 24/7</a></li>
+              <li class="nav-item"><a class="nav-link" href="#testimoniales">Pacientes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contacto">Contáctanos</a></li>
+            </ul>
+
+            <!-- Botones dentro del cajón -->
+            <div class="mobile-buttons d-flex justify-content-center mt-3 gap-2">
+              <a href="#" class="btn btn--primary">Regístrate</a>
+              <a href="#" class="btn btn--secondary">Iniciar Sesión</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
 
 
@@ -197,7 +185,8 @@
     <!-- #bar end -->
 
     <!-- Motivation -->
-    <section id="motivation" class="motivation text-center section feature feature-left bg-white">
+    <section id="motivation" class="motivation text-center section feature feature-left bg-white"
+      style="background-image: url(assets/images/background/site_background.png);">
       <div class="container">
         <img src="assets/images/icons/star.svg" alt="Consulta médica por videollamada" class="img-fluid rounded mb-3">
         <h2 class="mb-4">¡Lo que nos motiva!</h2>
@@ -406,7 +395,7 @@
     <!-- #patients End-->
 
     <!-- End-Section ============================================= -->
-    <section id="end-section" class="section feature feature-left position-relative">
+    <section id="end-section" class="section feature feature-left position-relative" style="background-image: url('assets/images/background/Background_2.jpg');">
       <div class="container">
         <div class="row">
 
@@ -608,23 +597,23 @@
     <i class="bi bi-whatsapp"></i>
   </a>
 
-<!-- Bootstrap JS (necesario para que el menú se abra/cierre) -->
+  <!-- Bootstrap JS (necesario para que el menú se abra/cierre) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('#navmenu .nav-link, #navmenu .mobile-buttons .btn');
-  const navCollapse = document.getElementById('navmenu');
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('#navmenu .nav-link, #navmenu .mobile-buttons .btn');
+      const navCollapse = document.getElementById('navmenu');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      if (window.innerWidth <= 991) {
-        const bsCollapse = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse, {toggle: false});
-        bsCollapse.hide();
-      }
+      navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 991) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse, { toggle: false });
+            bsCollapse.hide();
+          }
+        });
+      });
     });
-  });
-});
-</script>
+  </script>
 
 </body>
 
