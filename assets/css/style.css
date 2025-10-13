@@ -2021,6 +2021,15 @@ li.open > a:focus {
   .hero .hero-action form {
     justify-content: center;
   }
+  @media (max-width: 991px) {
+  .hero-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .hero .row-content {
@@ -2034,6 +2043,7 @@ li.open > a:focus {
   .hero .hero-action form .form-control {
     width: 230px;
   }
+  
 }
 
 div#lq-glass {
