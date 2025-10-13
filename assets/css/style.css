@@ -1277,6 +1277,10 @@ box-shadow: 8px 4px 8px #0000007d;
         border: 1px solid #0070cd;
         color: #0070cd;
     }
+    a.btn.btn--primary.me-2,
+    a.btn.btn--secondary {
+    margin-bottom: 20px;
+}
 }
 
 .btn--white.btn--secondary:active,
