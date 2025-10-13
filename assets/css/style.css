@@ -1897,14 +1897,14 @@ li.open > a:focus {
 \*------------------------------------*/
 .hero {
   padding-top: 120px;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   background-image: url('/Users/branchbit/Proyectos/HealthPod/01 - Sitio Web/Healthpod/MAIN_FILES/kear/assets/images/background/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .hero .hero-headline {
-  color: #444444;
+  color: #d9d9d9;
   font-size: 55px;
   font-weight: 500;
   line-height: 75px;
@@ -1915,7 +1915,7 @@ li.open > a:focus {
   font-size: 35px;
   font-weight: 400;
   line-height: 30px;
-  color: #444444;
+  color: #d9d9d9;
 }
 .hero .hero-bio {
   font-family: "Poppins", sans-serif;
@@ -2013,6 +2013,29 @@ li.open > a:focus {
   .hero .hero-action form .form-control {
     width: 230px;
   }
+}
+
+div#lq-glass {
+    display: flex;
+    flex-direction: column;
+    width: 662px;
+    gap: 10px;
+    padding: 20px 20px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(206, 149, 149, 0.15) 0%, rgba(206, 149, 149, 0.15) 100%), linear-gradient(111deg, rgba(86, 169, 221, 0.1) 0%, rgba(246, 250, 253, 0.1) 50%, rgba(203, 54, 49, 0.1) 100%);
+    align-items: flex-start;
+    position: relative;
+    border: 1px inset #0dcaf04f;
+    backdrop-filter: blur(45px) saturate(280%);
+    box-shadow: inset 0px 0px 20px rgb(255 255 255 / 17%);
+}
+
+/*------------------------------------*\
+    #About
+\*------------------------------------*/
+section#about {
+   box-shadow: 0px 20px 18px #03040bf5 inset;
 }
 
 /*------------------------------------*\
