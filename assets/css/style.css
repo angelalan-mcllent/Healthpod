@@ -1271,6 +1271,14 @@ box-shadow: 8px 4px 8px #0000007d;
   background-color: #ffffff;
 }
 
+@media (max-width: 991px) {
+    .btn--secondary {
+        background-color: #FFF !important;
+        border: 1px solid #0070cd;
+        color: #0070cd;
+    }
+}
+
 .btn--white.btn--secondary:active,
 .btn--white.btn--secondary:focus,
 .btn--white.btn--secondary:hover {
@@ -1898,10 +1906,15 @@ li.open > a:focus {
 .hero {
   padding-top: 120px;
   padding-bottom: 120px;
-  background-image: url('/Users/branchbit/Proyectos/HealthPod/01 - Sitio Web/Healthpod/MAIN_FILES/kear/assets/images/background/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media only screen and (max-width: 991px) {
+    .hero {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }
 .hero .hero-headline {
   color: #d9d9d9;
@@ -1958,7 +1971,7 @@ li.open > a:focus {
 
 @media only screen and (max-width: 767px) {
   .hero {
-    background-image: none !important;
+    padding: 20px;
   }
   .hero .hero-action .btn {
     display: block;
@@ -1988,6 +2001,10 @@ li.open > a:focus {
     font-size: 28px;
     line-height: 33px;
   }
+.hero .hero-bio-big {
+    font-size: 20px;
+}
+
   .hero .hero-bio {
     font-size: 15px;
     line-height: 26px;
@@ -2035,7 +2052,7 @@ div#lq-glass {
     #About
 \*------------------------------------*/
 section#about {
-   box-shadow: 0px 20px 18px #03040bf5 inset;
+   box-shadow: 0px 60px 20px #03040bf5 inset;
 }
 
 /*------------------------------------*\
