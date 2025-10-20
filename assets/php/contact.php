@@ -1,7 +1,7 @@
 <?php require("PHPMailer/PHPMailerAutoload.php");
 
 // ADD your Email and Name
-$recipientEmail='engaymanfikry@gmail.com';
+$recipientEmail='diegobri2002@yahoo.com.mx';
 $recipientName='John Doe';
 
 //collect the posted variables into local variables before calling $mail = new mailer
@@ -37,8 +37,7 @@ $message = '<html><body>';
 $message .= '<table rules="all" style="border:1px solid #666;width:300px;" cellpadding="10">';
 $message .= ($senderName) ? "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . $senderName . "</td></tr>" : '';
 $message .= ($senderPhone) ?"<tr><td><strong>Phone:</strong> </td><td>" . $senderPhone . "</td></tr>" : '';
-$message .= ($senderType) ?"<tr><td><strong>User Type:</strong> </td><td>" . $senderType . "</td></tr>" : '';
-$message .= ($senderSpeciality) ?"<tr><td><strong>Speciality:</strong> </td><td>" . $senderSpeciality . "</td></tr>" : '';
+$message .= ($senderemail) ?"<tr><td><strong>Email:</strong> </td><td>" . $senderemail . "</td></tr>" : '';
 $message .= "</table>";
 $message .= "</body></html>";
 

@@ -1134,7 +1134,7 @@ section {
   -o-border-radius: 4px;
   border-radius: 20px;
   padding: 0;
-  width: 150px;
+  width: 170px;
   height: 44px;
   line-height: 44px;
   letter-spacing: 0.2px;
@@ -2181,10 +2181,6 @@ section#farmacia {
 .end-section, .section#end-section {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url('/Users/branchbit/Proyectos/HealthPod/01 - Sitio Web/Healthpod/MAIN_FILES/kear/assets/images/background/Background_2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     }
 
     /* Overlay degradado de blanco (derecha) a transparente (izquierda) */
@@ -2201,6 +2197,9 @@ section#farmacia {
       position: relative;
       z-index: 2;
     }
+    .col-12.col-md-6.col-lg-6 {
+    align-content: center;
+}
 
 
 /*------------------------------------*\
@@ -2351,7 +2350,7 @@ section#farmacia {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 24px;
 }
 
 .hr-bar {
@@ -2403,6 +2402,10 @@ section#farmacia {
 /*------------------------------------*\
     #Call To Action
 \*------------------------------------*/
+.col-12.col-md-6.col-lg-5.offset-lg-1 {
+    align-content: center;
+}
+
 .cta h3 {
   font-size: 50px;
   font-weight: 500;
@@ -2429,7 +2432,7 @@ section#farmacia {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 24px;
   -moz-box-shadow: 0 10px 40px 0 rgba(32, 62, 84, 0.08);
   -webkit-box-shadow: 0 10px 40px 0 rgba(32, 62, 84, 0.08);
   box-shadow: 0 10px 40px 0 rgba(32, 62, 84, 0.08);
