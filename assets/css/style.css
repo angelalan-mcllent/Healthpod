@@ -169,6 +169,14 @@ h6 {
   font-size: 14px;
 }
 
+p.heading-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
 p {
   color: #444444;
   font-size: 13px;
@@ -889,6 +897,10 @@ section {
   border-bottom: 1px solid #f7fafc;
 }
 
+  .mt-4 {
+    justify-self: center;
+}
+
 /*------------------------------------*\
     #Grid
 \*------------------------------------*/
@@ -1582,6 +1594,7 @@ header.sticky-top {
 
 .navbar-nav {
   padding: 20px;
+  margin-top: 15px;
 }
 .navbar-nav > li {
   margin-right: 21px;
@@ -1884,7 +1897,7 @@ li.open > a:focus {
   font-size: 2rem;
   font-weight: 500;
   padding: 0.75rem 1rem;
-  margin-top: 140px;
+  margin-top: 115px;
   z-index: 1000;
 }
 
@@ -1972,6 +1985,11 @@ li.open > a:focus {
   height: 50px;
   line-height: 50px;
 }
+.hero-action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 @media only screen and (max-width: 767px) {
   .hero {
@@ -2023,14 +2041,11 @@ li.open > a:focus {
     justify-content: center;
   }
   @media (max-width: 991px) {
-  .hero-action {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
+    .hero-action {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .hero .row-content {
@@ -2064,9 +2079,9 @@ div#lq-glass {
 }
 
 /*------------------------------------*\
-    #About
+    #Farmacia
 \*------------------------------------*/
-section#about {
+section#farmacia {
    box-shadow: 0px 60px 20px #03040bf5 inset;
 }
 
