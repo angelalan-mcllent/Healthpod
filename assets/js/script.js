@@ -52,3 +52,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial show
     showSlide(currentSlide);
 });
+
+
+// ===============================
+// PRICING TOGGLE FUNCTIONALITY
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("pricingToggle");
+  const basic = document.getElementById("basicPrice");
+  const pro = document.getElementById("proPrice");
+  const master = document.getElementById("masterPrice");
+
+  if (toggle && basic && pro && master) {
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        // 🔁 MODO MENSUAL
+        basic.textContent = "$229.00/mes";
+        pro.textContent = "$349.00/mes";
+        master.textContent = "$429.00/mes";
+      } else {
+        // 🔁 MODO ANUAL (precio por mes equivalente o total anual)
+        basic.textContent = "$2,748.00/año";
+        pro.textContent = "$4,188.00/año";
+        master.textContent = "$5,148.00/mes";
+      }
+    });
+  }
+});
