@@ -2604,6 +2604,7 @@ section#farmacia {
 \*------------------------------------*/
 /* === PRICING SECTION === */
 .pricing-section {
+  padding-top: 140px;
   background-color: #f7f7ff;
   padding: 4rem 0;
   text-align: center;

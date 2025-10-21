@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 🔁 MODO ANUAL (precio por mes equivalente o total anual)
         basic.textContent = "$2,748.00/año";
         pro.textContent = "$4,188.00/año";
-        master.textContent = "$5,148.00/mes";
+        master.textContent = "$4,699.00/año";
       }
     });
   }
