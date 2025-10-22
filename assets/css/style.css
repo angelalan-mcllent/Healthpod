@@ -1364,7 +1364,7 @@ ss
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 9999;
+  z-index: 9998;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2333,9 +2333,7 @@ div#lq-glass {
 /*------------------------------------*\
     #Farmacia
 \*------------------------------------*/
-section#farmacia {
-  box-shadow: 0px 60px 20px #03040bf5 inset;
-}
+
 
 /*------------------------------------*\
     #Motivation
@@ -2846,13 +2844,26 @@ li.plan-name {
 }
 
 /* Precios */
-.pricing-card .price {
+p.crossedprice {
+    font-size: 20px;
+    color: #acacac;
+    text-decoration: line-through;
+}
+
+p.price {
   font-size: 2.5rem;
   font-weight: 500;
   margin: 1rem 0;
 }
 
-.pricing-card.active .price {
+p.monthlyprice {
+    font-size: 20px;
+    color: #acacac;
+}
+
+.pricing-card.active p.price,
+.pricing-card.active p.crossedprice,
+.pricing-card.active p.monthlyprice {
   color: #fff;
 }
 
@@ -2894,6 +2905,16 @@ input#pricingToggle {
   width: 45%;
   justify-self: anchor-center;
   margin-bottom: 50px;
+}
+
+@media (max-width:992px) {
+  .toggle{
+    width:85%;
+  }
+
+  label.plan.me-2 {
+    font-size: 18px;
+}
 }
 
 .form-switch .form-check-input:checked {

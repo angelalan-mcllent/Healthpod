@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const basic = document.getElementById("basicPrice");
   const pro = document.getElementById("proPrice");
   const master = document.getElementById("masterPrice");
+  const crossedPrices = document.querySelectorAll(".crossedprice");
+  const monthlyPrices = document.querySelectorAll(".monthlyprice");
 
   if (toggle && basic && pro && master) {
     toggle.addEventListener("change", () => {
@@ -70,15 +72,25 @@ document.addEventListener("DOMContentLoaded", function () {
         basic.textContent = "$229.00/mes";
         pro.textContent = "$349.00/mes";
         master.textContent = "$429.00/mes";
+
+        // Oculta precios cruzados y precios mensuales
+        crossedPrices.forEach(el => el.classList.add("d-none"));
+        monthlyPrices.forEach(el => el.classList.add("d-none"));
+
       } else {
-        // 🔁 MODO ANUAL (precio por mes equivalente o total anual)
+        // 🔁 MODO ANUAL
         basic.textContent = "$2,748.00/año";
         pro.textContent = "$4,188.00/año";
         master.textContent = "$4,699.00/año";
+
+        // Muestra precios cruzados y precios mensuales
+        crossedPrices.forEach(el => el.classList.remove("d-none"));
+        monthlyPrices.forEach(el => el.classList.remove("d-none"));
       }
     });
   }
 });
+
 
 // =============================
 // Mostrar modal al hacer scroll > 200px
