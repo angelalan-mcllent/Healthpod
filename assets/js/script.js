@@ -81,38 +81,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // =============================
-// Mostrar modal al hacer scroll > 200px (Bootstrap 5 compatible)
-// Pegar en: assets/js/script.js (o tu script principal)
+// Mostrar modal al hacer scroll > 200px
 // =============================
 document.addEventListener('DOMContentLoaded', function () {
   let modalShown = false;
-
-  // Obtener instancia de bootstrap Modal (no instanciamos hasta que la necesitemos)
   const modalEl = document.getElementById('global-modal');
-  // Guardamos la instancia en una variable para poder usar show/hide
-  let bsModal = null;
+  const modal = new bootstrap.Modal(modalEl);
 
-  function showGlobalModal() {
-    if (!bsModal) {
-      bsModal = new bootstrap.Modal(modalEl, {
-        backdrop: true,
-        keyboard: true
-      });
-    }
-    bsModal.show();
-  }
-
-  // Listener de scroll: si scrolleas > 200 px y no se ha mostrado, mostrar modal
-  window.addEventListener('scroll', function onScroll() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop > 200 && !modalShown) {
+  // Mostrar modal al hacer scroll más de 200px
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 200 && !modalShown) {
+      modal.show();
       modalShown = true;
-      showGlobalModal();
-      // opcional: ya no necesitamos este listener (libera recursos)
-      window.removeEventListener('scroll', onScroll);
     }
   });
 
-  // Opcional: si quieres asegurarte de que el usuario pueda cerrar con ESC o clic fuera,
-  // bootstrap lo gestiona por defecto con las opciones que usamos (backdrop:true, keyboard:true).
+  // Cerrar modal con el botón CTA y hacer scroll a #pricing-section
+  modalEl.addEventListener('click', function (e) {
+    if (e.target.closest('.btn--primary')) {
+      e.preventDefault();
+      modal.hide();
+
+      // Esperar a que termine la animación del modal antes de hacer scroll
+      setTimeout(() => {
+        const target = document.querySelector('#pricing-section');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
+    }
+  });
 });

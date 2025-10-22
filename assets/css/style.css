@@ -1546,7 +1546,7 @@ label {
 
 /* Hacemos el contenido del modal neutro (sin glass) */
 #global-modal .modal-content {
-  background: rgba(255,255,255,0); /* transparente */
+  background: #F6FAFD;
   border: none;
   box-shadow: 0 12px 36px rgba(0,0,0,0.35);
   overflow: hidden;
@@ -1554,11 +1554,10 @@ label {
 
 /* Tamaño y centrado de la imagen */
 #global-modal .modal-body {
-  padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   background: transparent;
+  flex-direction: column;
 }
 
 #global-modal .modal-body img {
