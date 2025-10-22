@@ -1532,6 +1532,61 @@ label {
 }
 
 /*------------------------------------*\
+    #PopUp Modal
+\*------------------------------------*/
+
+/* asegurar que modal y backdrop estén por encima */
+.modal {
+  z-index: 9999 !important;
+}
+
+.modal-backdrop {
+  z-index: 9998 !important;
+}
+
+/* Hacemos el contenido del modal neutro (sin glass) */
+#global-modal .modal-content {
+  background: rgba(255,255,255,0); /* transparente */
+  border: none;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+/* Tamaño y centrado de la imagen */
+#global-modal .modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+#global-modal .modal-body img {
+  width: 100%;
+  max-width: 900px;   /* ajusta si quieres un tope distinto */
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Glass effect en EL BACKDROP (todo lo que está alrededor) */
+.modal-backdrop.show {
+  background: rgba(255,255,255,0.06); /* tono sutil: cambia opacidad si quieres más/menos */
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+}
+
+/* Si quieres que el backdrop use un leve degradado oscuro en vez de blanco: */
+
+.modal-backdrop.show {
+  background: linear-gradient(rgba(10,10,10,0.35), rgba(10,10,10,0.35));
+  backdrop-filter: blur(8px) saturate(140%);
+}
+
+
+
+/*------------------------------------*\
     #Heading
 \*------------------------------------*/
 .heading {

@@ -79,3 +79,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// =============================
+// Mostrar modal al hacer scroll > 200px (Bootstrap 5 compatible)
+// Pegar en: assets/js/script.js (o tu script principal)
+// =============================
+document.addEventListener('DOMContentLoaded', function () {
+  let modalShown = false;
+
+  // Obtener instancia de bootstrap Modal (no instanciamos hasta que la necesitemos)
+  const modalEl = document.getElementById('global-modal');
+  // Guardamos la instancia en una variable para poder usar show/hide
+  let bsModal = null;
+
+  function showGlobalModal() {
+    if (!bsModal) {
+      bsModal = new bootstrap.Modal(modalEl, {
+        backdrop: true,
+        keyboard: true
+      });
+    }
+    bsModal.show();
+  }
+
+  // Listener de scroll: si scrolleas > 200 px y no se ha mostrado, mostrar modal
+  window.addEventListener('scroll', function onScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > 200 && !modalShown) {
+      modalShown = true;
+      showGlobalModal();
+      // opcional: ya no necesitamos este listener (libera recursos)
+      window.removeEventListener('scroll', onScroll);
+    }
+  });
+
+  // Opcional: si quieres asegurarte de que el usuario pueda cerrar con ESC o clic fuera,
+  // bootstrap lo gestiona por defecto con las opciones que usamos (backdrop:true, keyboard:true).
+});
