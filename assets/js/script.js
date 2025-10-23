@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       } else {
         // 🔁 MODO ANUAL
-        basic.textContent = "$2,748.00/año";
-        pro.textContent = "$4,188.00/año";
-        master.textContent = "$4,699.00/año";
+        basic.textContent = "$2,258.36/año";
+        pro.textContent = "$3,434.16/año";
+        master.textContent = "$4,221.36/año";
 
         // Muestra precios cruzados y precios mensuales
         crossedPrices.forEach(el => el.classList.remove("d-none"));
