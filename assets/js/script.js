@@ -53,6 +53,34 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
 });
 
+// ===============================
+// NAVBAR TOGGLER - FIX DEFINITIVO HEALTHPOD
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggler = document.querySelector(".navbar-toggler");
+  const navMenu = document.querySelector("#navmenu");
+  const bsCollapse = new bootstrap.Collapse(navMenu, { toggle: false });
+
+  toggler.addEventListener("click", () => {
+    if (navMenu.classList.contains("show")) {
+      bsCollapse.hide();
+    } else {
+      bsCollapse.show();
+    }
+    toggler.classList.toggle("active"); // 💫 alterna la animación
+  });
+
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      if (navMenu.classList.contains("show")) {
+        bsCollapse.hide();
+toggler.classList.remove("active"); // 💫 vuelve al estado normal
+      }
+    });
+  });
+});
+
 
 // ===============================
 // PRICING TOGGLE FUNCTIONALITY
