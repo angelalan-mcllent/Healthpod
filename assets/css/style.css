@@ -1907,15 +1907,6 @@ header.sticky-top {
     margin-left: 15px;
   }
 
-  /* Ícono hamburguesa visible y con buen color */
-  .navbar-toggler {
-    border: none;
-    position: absolute;
-    top: 25px;
-    right: 15px;
-    z-index: 10;
-  }
-
   .navbar-toggler:focus {
     outline: none;
     box-shadow: none;
@@ -2004,6 +1995,7 @@ header.sticky-top {
   cursor: pointer;
   transition: transform 0.3s ease;
   z-index: 1050;
+  top:0px !important;
 }
 
 .navbar-toggler:focus {
@@ -3201,6 +3193,17 @@ div#prox {
   #proximamente .heading-desc {
     font-size: 0.95rem;
   }
+  #proximamente {
+  background-image: none !important;
+  height: 110vh !important;
+  margin-top:40px;
+}
+}
+
+@media (min-width: 990px){
+  img#encon {
+    display: none;
+}
 }
 
 @media (max-width: 768px) {
