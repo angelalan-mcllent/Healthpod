@@ -1166,8 +1166,8 @@ section {
 
 /* Button Primary */
 .btn--primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: #0069ff;
+  border-color: #0069ff;
   color: #ffffff;
   box-shadow: 8px 4px 8px #0000007d;
 }
@@ -1175,8 +1175,8 @@ section {
 .btn--primary:active,
 .btn--primary:focus,
 .btn--primary:hover {
-  background-color: #CB3631;
-  border-color: #CB3631;
+  background-color: #df0808;
+  border-color: #df0808;
   color: #ffffff;
   box-shadow: inset 8px 4px 8px #0000007d;
 }
@@ -1207,8 +1207,8 @@ section {
 
 /* Button Secondary*/
 .btn--secondary {
-  color: var(--primary);
-  border-color: var(--primary);
+  color: #0069ff;
+  border-color: #0069ff;
   background-color: #ffffff;
   box-shadow: 8px 4px 8px #0000007d;
 }
@@ -1217,8 +1217,8 @@ section {
 .btn--secondary:focus,
 .btn--secondary:hover {
   background-color: #FFFFFF;
-  color: #CB3631;
-  border-color: #CB3631;
+  color: #df0808;
+  border-color: #df0808;
   box-shadow: inset 8px 4px 8px #0000007d;
 }
 
@@ -2086,7 +2086,7 @@ header.sticky-top {
 \*------------------------------------*/
 .promobar {
   position: relative;
-  background-color: #CB3631;
+  background-color: #df0808;
   color: #fff;
   text-align: center;
   font-size: 2rem;
