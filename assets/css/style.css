@@ -3230,6 +3230,179 @@ span#\34 04 {
 }
 
 /*------------------------------------*\
+  # Legales Page
+\*------------------------------------*/
+
+.legal-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 0 40px;
+  margin-top: 120px;
+  background-color: #fff;
+}
+
+.legal-wrapper .container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;
+}
+
+/* === Sidebar (Desktop) === */
+.leftcol {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.legal-sidebar {
+  flex: 0 0 260px;
+  position: fixed;
+  top: 100px;
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.legal-sidebar h2 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.legal-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legal-sidebar li {
+  margin-bottom: 10px;
+}
+
+.legal-sidebar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.legal-sidebar a:hover,
+.legal-sidebar a.active {
+  color: #CB3631;
+}
+
+/* === Contenido === */
+.legal-content {
+  flex: 1;
+  max-width: 850px;
+}
+
+.legal-section {
+  margin-bottom: 60px;
+}
+
+.legal-section h3 {
+  color: #CB3631;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+.legal-section h4 {
+  margin-top: 24px;
+  color: #222;
+}
+
+.legal-section ul,
+.legal-section ol {
+  margin-left: 20px;
+}
+
+.legal-section a {
+  color: #56A9DD;
+}
+
+/*------------------------------------*\
+  # Responsividad
+\*------------------------------------*/
+
+@media (max-width: 768px) {
+  .legal-wrapper .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .leftcol {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+    position: relative;
+  }
+
+  .legal-sidebar {
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    max-height: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: #fff;
+    padding: 16px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .legal-sidebar ul {
+    display: flex;
+    padding-bottom: 4px;
+    justify-content: space-evenly;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .legal-sidebar li {
+    margin: 0;
+  }
+
+  .legal-sidebar h2 {
+    display: none;
+  }
+
+  .legal-content {
+    order: 2;
+    width: 100%;
+  }
+
+  .legal-wrapper {
+    margin-top: 80px;
+    padding: 40px 0;
+  }
+
+  .legal-sidebar ul {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .legal-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .legal-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .legal-section p, 
+  .legal-section li {
+    font-size: 0.95rem;
+  }
+}
+
+
+/*------------------------------------*\
     #Landing Page / Promo Page
 \*------------------------------------*/
   .landing-hero {
