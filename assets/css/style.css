@@ -3237,7 +3237,7 @@ span#\34 04 {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 60px 0 40px;
+  margin-bottom: 75px;
   margin-top: 120px;
   background-color: #fff;
 }
