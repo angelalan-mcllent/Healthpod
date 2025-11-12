@@ -2955,6 +2955,14 @@ p.monthlyprice {
   color: #fff;
 }
 
+p#iva {
+    color: #acacac;
+}
+
+p#iva-white {
+    color: #fff;
+}
+
 /* Separadores */
 .pricing-card ul li {
   list-style: none;
