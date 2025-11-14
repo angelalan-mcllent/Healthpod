@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.carousel-slide').forEach(slide => {
+        if (slide.dataset.bg) {
+            slide.style.backgroundImage = `url(${slide.dataset.bg})`;
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
     const prevButton = document.querySelector('.prev');

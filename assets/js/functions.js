@@ -162,7 +162,7 @@
 
             $(this).typed({
                 strings: $string,
-                typeSpeed: 0,
+                typeSpeed: 70,
                 loop: true,
             });
         });
