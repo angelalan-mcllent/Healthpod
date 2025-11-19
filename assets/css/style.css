@@ -1587,7 +1587,33 @@ label {
   backdrop-filter: blur(8px) saturate(140%);
 }
 
+/* Bottom Promo Bar */
+.bottom-promo-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #00AEEF;
+  padding: 14px 20px;
+  text-align: cesnter;
+  z-index: 9999;
+  animation: slideUp 0.4s ease;
+}
 
+.bottom-promo-bar button {
+  width: 100%;
+  color: white;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
 
 /*------------------------------------*\
     #Heading

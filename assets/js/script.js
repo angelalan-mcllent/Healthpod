@@ -160,3 +160,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// ===============================
+// Bottom Promo Bar on Modal Close
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+  const mainModal = document.getElementById('global-modal');
+  const bottomBar = document.getElementById('bottom-promo-bar');
+  const bottomBtn = document.getElementById('bottom-promo-btn');
+
+  // Cuando se cierre el modal principal
+  mainModal.addEventListener('hidden.bs.modal', () => {
+    bottomBar.classList.remove('d-none');
+  });
+
+  // Cuando se haga click en el botón del bottom bar
+  bottomBtn.addEventListener('click', () => {
+    const target = document.querySelector('#pricing-section');
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
