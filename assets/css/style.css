@@ -1737,6 +1737,7 @@ header.sticky-top {
     height: 80px;
     line-height: 80px;
     margin-left: 15px;
+    max-width: 250px;
   }
 
   .navbar .navbar-brand .logo-dark {
@@ -2080,6 +2081,16 @@ header.sticky-top {
     margin-top: 1rem;
   }
 }
+
+/* ===== Cambiar logo en móvil ===== */
+@media (max-width: 991px) {
+  .navbar-brand .logo-dark {
+    content: url('assets/images/background/healthpod-logo_mobile.webp');
+    width: auto;
+    height: 55px; /* Ajusta si quieres más grande o pequeño */
+  }
+}
+
 
 /*------------------------------------*\
     #Promobar
