@@ -162,22 +162,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ===============================
-// Bottom Promo Bar on Modal Close
+// Bottom Promo Bar Visible Except Inside Pricing
 // ===============================
 
 document.addEventListener('DOMContentLoaded', function () {
   const mainModal = document.getElementById('global-modal');
   const bottomBar = document.getElementById('bottom-promo-bar');
   const bottomBtn = document.getElementById('bottom-promo-btn');
+  const pricingSection = document.getElementById('pricing-section');
 
-  // Cuando se cierre el modal principal
+  // Mostrar barra cuando se cierre el modal principal
   mainModal.addEventListener('hidden.bs.modal', () => {
     bottomBar.classList.remove('d-none');
   });
 
-  // Cuando se haga click en el botón del bottom bar
+  // Mantener barra visible siempre excepto en pricing
+  window.addEventListener('scroll', () => {
+    const rect = pricingSection.getBoundingClientRect();
+
+    const isInsidePricing =
+      rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isInsidePricing) {
+      bottomBar.classList.add('hidden');  // Ocultar solo en pricing
+    } else {
+      bottomBar.classList.remove('hidden'); // Mostrar en todo lo demás
+    }
+  });
+
+  // Click → Ir a sección de membresías
   bottomBtn.addEventListener('click', () => {
-    const target = document.querySelector('#pricing-section');
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    pricingSection.scrollIntoView({ behavior: 'smooth' });
   });
 });
