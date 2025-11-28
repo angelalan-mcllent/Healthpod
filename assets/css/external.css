@@ -3847,17 +3847,17 @@ textarea {
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
-	line-height: inherit
+	line-height: inherit;
 }
 
 button,
 input {
-	overflow: visible
+	overflow: visible;
 }
 
 button,
 select {
-	text-transform: none
+	text-transform: none;
 }
 
 [type=reset],
@@ -7952,7 +7952,8 @@ tbody.collapse.show {
 	flex-direction: column;
 	padding-left: 0;
 	margin-bottom: 0;
-	list-style: none
+	list-style: none;
+	align-items: center;
 }
 
 .navbar-nav .nav-link {

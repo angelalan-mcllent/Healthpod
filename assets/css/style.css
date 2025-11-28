@@ -1967,6 +1967,7 @@ header.sticky-top {
 
   .navbar-nav {
     padding: 0;
+    align-items: center;
   }
 
   .navbar-nav li {
