@@ -176,17 +176,39 @@ document.addEventListener('DOMContentLoaded', function () {
     bottomBar.classList.remove('d-none');
   });
 
-  // Mantener barra visible siempre excepto en pricing
+  // Lógica de visibilidad al hacer scroll
   window.addEventListener('scroll', () => {
     const rect = pricingSection.getBoundingClientRect();
+    
+    // Detectamos si es versión móvil (usando el mismo breakpoint de tu CSS: 991px)
+    const isMobile = window.innerWidth <= 991; 
 
-    const isInsidePricing =
-      rect.top < window.innerHeight && rect.bottom > 0;
+    // Condición 1: ¿Está el usuario viendo la sección de precios actualmente?
+    const isInsidePricing = rect.top < window.innerHeight && rect.bottom > 0;
 
-    if (isInsidePricing) {
-      bottomBar.classList.add('hidden');  // Ocultar solo en pricing
+    // Condición 2: ¿Ya pasó el usuario la sección de precios y está más abajo (en contacto)?
+    // (rect.bottom <= 0 significa que el borde inferior de precios subió fuera de la pantalla)
+    const isPastPricing = rect.bottom <= 0;
+
+    let shouldHide = false;
+
+    if (isMobile) {
+      // EN MOBILE: Ocultar si está en precios O si ya pasó hacia abajo (Contacto)
+      if (isInsidePricing || isPastPricing) {
+        shouldHide = true;
+      }
     } else {
-      bottomBar.classList.remove('hidden'); // Mostrar en todo lo demás
+      // EN DESKTOP: Ocultar SOLO si está en precios (Comportamiento original)
+      if (isInsidePricing) {
+        shouldHide = true;
+      }
+    }
+
+    // Aplicar la clase según la lógica calculada
+    if (shouldHide) {
+      bottomBar.classList.add('hidden'); 
+    } else {
+      bottomBar.classList.remove('hidden');
     }
   });
 
